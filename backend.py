@@ -54,6 +54,13 @@ def prev_url(default = '/'):
                request.referrer or \
                url_for(default)
 
+			   
+def removeComments():
+	dir_c = "data/comments.csv"
+	dir_u = "data/usernames.csv"
+	reader.write_file(dir_c,"")
+	reader.write_file(dir_u,"")
+
 if (__name__ == "__main__"):
 	web.debug=True
 	web.run(host="0.0.0.0",port=9001)
