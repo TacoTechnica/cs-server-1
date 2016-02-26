@@ -43,6 +43,10 @@ def postComment():
         reader.append_file(dir_u, "\n" + rf["name"])
         return redirect("/comments")
 
+@web.route("/comment/reset")
+def resetComments():
+	removeComments()
+
 @web.route("/<anything>")
 def errorPage(anything):
         return render_template("error.html")
@@ -53,6 +57,13 @@ def prev_url(default = '/'):
         return request.args.get('next') or \
                request.referrer or \
                url_for(default)
+
+			   
+def removeComments():
+	dir_c = "data/comments.csv"
+	dir_u = "data/usernames.csv"
+	reader.write_file(dir_c,"")
+	reader.write_file(dir_u,"")
 
 if (__name__ == "__main__"):
 	web.debug=True
