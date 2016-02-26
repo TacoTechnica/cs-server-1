@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request
 web = Flask(__name__)
-from util import reader
+import reader
 
 @web.route("/home")
 def homePage():
