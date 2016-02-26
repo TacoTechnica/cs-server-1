@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{%block content%}
+<title> EDITOR </title>
+<div class = "divEditorMain" id="div_main"> <!-- position="relative" left="-200px" -->
+	<h1 class = "special"> HTMLCEPTION</h1><br>
+	<div class = "description">
+		An html editor... <br>
+		WITHIN HTML! <br>
+		<b> BAAAWWWWWWM </b> <br> <br>
+	</div>
+	Editor View: <br>
+
+	<!-- RUN EDITOR SCRIPT-->
+	<script src = "/static/scripts/editor.js"> </script>
+	<script> initialize(); </script>
+
+	<!-- TEXT DISPLAY -->
+	<table class = "editor">
+		<tr> <td class = "editor">
+			<p id="textdisplay"> <i> Empty Text </i> </p>
+		</td> </tr>
+	</table>
+	<br>
+	<!-- HTML VIEW -->
+	HTML View: <br>
+	<table border = "0" class = "htmlview">
+		<tr> <td>
+			<p id="htmldisplay"> <i> Empty HTML </i> </p>
+		</td> </tr>
+	</table>
+
+	<!-- OPEN HTML FILE 
+	<iframe src="test2.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" >
+	</iframe>
+	-->
+</div>
+	
+<div class = "fixed">
+	<p class="internaltitle"> Add From Template</a> <br>
+	<div class = "internal">
+		<button onclick = "addButton()"> Add Button </button> <br>
+		<button onclick = "addHtmlExample()"> Add Example </button> <br>
+	</div>
+	<p class="internaltitle"> Options </a> <br>
+	<div class= "internal">
+		<input id = "checkbox_animations" type="checkbox" checked = "true"> Fancy Animations?<br>
+		<input id = "checkbox_autoIndent" type="checkbox" checked = "true"> Automatic Indentation?<br>
+		<input id = "checkbox_textures" type="checkbox" checked = "true"> Textures?<br>
+		<br>
+	</div>
+</div>
+{% endblock %}

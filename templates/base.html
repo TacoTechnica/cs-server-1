@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--<link rel="shortcut icon" href=""> -->
+		<link id = "style_main"rel="stylesheet" type="text/css" href="/static/styles/style_default.css">
+	</head>
+	<body>
+		<div class="header">
+		<a class="topButton" href="/home"> Home </a>
+		<a class="topButton" href="/editor"> HTMLCEPTION</a>
+		<a class="topButton" href="/comments"> Comments! </a>
+		<a class="topButton" href="/about"> About me </a>
+		<a class="topButton" href="/content"> My Content </a>
+		<a class="topButton" href="/hiring"> Have creative/marketing skills? Click Here!</a>
+		</div>
+		<br>
+		<div class="body">
+			{% block content %}
+			{% endblock %}
+		</div>
+		<br>
+		<div class="comments">
+			<h2> <i>Got Comments or things to say?</i> Comment here! </h2>
+			<br>
+			<center><i> New Comment: </i></center>
+			<form action = "/comment" method = "POST">
+				Name: <br>
+				<input type="text" name="name"> <br>
+				Comment Contents: <br>
+				<input type="text" name="content" style="width:100%;"> <br>
+				<!--<textarea name="content" style="width:300px;height:150px;"> </textarea> <br> -->
+				<input type = "submit" value = "Click here or press Enter to Post Comment!"> </input>
+			</form>
+		</div>
+		<br> 
+		<div class="footer">
+			<p style="bottom:0"> 
+				<i> <center> Adris Jaoutakas 2016 </center> </i>
+			</p>
+		</div>
+	</body>
+</html>

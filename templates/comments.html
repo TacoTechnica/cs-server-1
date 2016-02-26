@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{%block content%}
+	<title> Comments! </title>
+	<center> 
+		<h1> The Comment Section </h1> 
+		<br>
+		<i> WELCOME! </i> <br>
+	</center>
+	Yes, you read that right.
+	<br>
+	A comment section!
+	<br>
+	<b> YOU </b> get to post stuff here about this site!
+	<br>
+	Yes, <b> YOU! </b>
+	<br><br>
+	Before you get too excited and start spamming the crap out of everything, here are some rules:
+	<br><br>
+	<ol>
+		<li> No foul language <i>(I mean, I'm not gonna stop you if you do this one, but just don't, okay?)</i> </li>
+		<li> No offensive content <i> (yeah, don't do that either) </i> </li>
+		<li> No spamming <i> No exceptions for this one. If ya spam, you'll ruin the experience for everyone else :( </i> </li>
+		<li> 
+			Don't try to screw around/intentionally break the program 
+			<i> (Look, I couldn't spend much time making this robust) </i> 
+		</li>
+		<li> Have fun!... Actually, that should never be a rule. <b> Have as much/little fun as you please! </b> </li>
+	</ol>
+	<br><br><br>
+
+	<div class = "comments">
+		And here are the comments! <br>
+		_______________________________ <br> <br>
+		{%if array_comment|length > 1 %}
+			{%for i in range(array_comment|length - 1) %}
+				<br>
+				Comment {{array_comment|length - i - 1}}: <br>
+				<div class = "comment">
+					by <b><i>{{array_name[array_comment|length - 1 - i]}} </i></b>
+					<div class = "commentContent">
+					<br>________________________________ <br>
+					{{array_comment[array_comment|length - 1 - i]}}
+					<br>________________________________
+					</div>
+				</div>
+			{% endfor %}
+		{% else %}
+			<br>
+			<i> No comments yet! Be the first one to comment, and be put at the bottom of the pile! YAYYY! </i>
+			<br>
+		{% endif %}
+	</div>
+{% endblock %}

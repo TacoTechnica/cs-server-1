@@ -1,0 +1,127 @@
+body {
+	/*background-image: url('../images/bg_wood.jpg');*/
+	background-color: #A76E44;
+	background-repeat: repeat;
+	font-family: Helvetica Neue, Helvetica;
+}
+div.header {
+	margin: 0 auto;
+	width: 90%;
+	height: 100px;
+	background-color: #C9956E;
+	text-align: left;
+	text-decoration: italic;
+	padding: 5px;
+}
+div.body {
+	/*background-image: url('../images/bg_paper.jpg');*/
+	background-color: #F5CBAD;
+	margin: 0 auto;
+	min-height: 400px;
+	width: 86%;
+	padding: 8px;
+}
+div.comments {
+	background-color: #88996A;
+	width: 90%;
+	margin: 0 auto;
+	padding: 12px;
+}
+div.footer {
+	padding: 8px;
+	margin: 0 auto;
+	width: 90%;
+	background-color: #456363;
+}
+/* HOME */
+a.topButton {
+	display: inline-block;
+	font-size: 14px;
+	min-width: 120px;
+	text-align:center;
+	text-decoration:none;
+	padding: 14px 25px;
+	color: #FFDDEE;
+}
+a.topButton:link, a.button:visited {
+	font-weight: bold;
+	background-color: #9D2D3C;
+	padding: 4px;
+}
+
+a.topButton:hover {
+	font-size: 16px;
+	font-weight: italic;
+	background-color: #7B0B1A;
+}
+a.topButton:active {
+	background-color: #DBDBDA;
+	padding: 2px;
+}
+
+/* EDITOR */
+div.divEditorMain {
+	
+}
+div.description {
+	padding: 8px;
+	font-style: italic;
+	color: #695B4B;
+}
+table.htmlview {
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	
+    /*left: 0;*/
+}
+td.editor {
+	background-image: url("../images/bg_paper.jpg");
+	vertical-align: top;
+	text-align: left;
+	min-width: 800px;
+}
+div.fixed {
+	background-image: url("../images/bg_rubber.jpg");
+	color: white;
+	position: fixed;
+    bottom: 8px;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+div.internal {
+	background-image: url("../images/bg_rubber.jpg");
+	color: white;
+	/*position: fixed;*/
+	bottom: 50%;
+	right: 8px;
+	width: 300px;
+	border: 3px solid #73FDF1;
+}
+p.internaltitle {
+	text-align: center;
+	font-weight: bold;
+	color: #DBA5B2;
+}
+
+/*COMMENTS*/
+div.comment {
+	padding: 10px;
+	min-width: 120px;
+	min-height: 64px;
+	background-color: #ABD2F7;/*#A58A72;*/
+	color: #232526;/*#D8E2C6;*/
+}
+div.commentContent {
+	background-color: #FFDCAA;
+	font-family: Helvetica;
+	border: 3px dotted #074646;
+	font-size: 18px;
+}
+div.commentTitle {
+	padding: 8px;
+	background-color: #A79EC3;
+	font-family: Helvetica;
+	border: 3px solid #074646;
+}
