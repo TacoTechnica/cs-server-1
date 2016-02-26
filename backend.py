@@ -43,7 +43,7 @@ def postComment():
         reader.append_file(dir_u, "\n" + rf["name"])
         return redirect("/comments")
 
-@web.route("/comment/reset")
+@web.route("/comments/reset")
 def resetComments():
 	removeComments()
 	return redirect(prev_url())
