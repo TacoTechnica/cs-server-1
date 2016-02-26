@@ -46,6 +46,7 @@ def postComment():
 @web.route("/comment/reset")
 def resetComments():
 	removeComments()
+	return redirect(prev_url())
 
 @web.route("/<anything>")
 def errorPage(anything):
